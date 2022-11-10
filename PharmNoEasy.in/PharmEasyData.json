@@ -449,21 +449,6 @@
     "deliveryDate": "2022-12-16T04:39:11.617Z"
 },
 {
-    "ID": 30,
-    "title": "Baidyanath Ayush Kwath",
-    "price": 108,
-    "ratings": 3.5,
-    "noOfRatings": 213,
-    "imageMain": "https://cdn01.pharmeasy.in/dam/products_otc/L93305/baidyanath-ayush-kwath-25-tea-bags-2-1654250754.jpg?dim=700x0&dpr=1&q=100",
-    "morePhoto": [
-        "https://cdn01.pharmeasy.in/dam/products_otc/L93305/baidyanath-ayush-kwath-25-tea-bags-3-1654250718.jpg",
-        "https://cdn01.pharmeasy.in/dam/products_otc/L93305/baidyanath-ayush-kwath-25-tea-bags-6.1-1641790968.jpg",
-        "https://cdn01.pharmeasy.in/dam/products_otc/L93305/baidyanath-ayush-kwath-25-tea-bags-6.2-1641790954.jpg"
-    ],
-    "Category": "Beverages",
-    "deliveryDate": "2022-11-18T07:59:01.267Z"
-},
-{
     "ID": 31,
     "title": "Roshi Immunicare Green Tea",
     "price": 254,
@@ -522,21 +507,6 @@
     ],
     "Category": "Beverages",
     "deliveryDate": "2022-12-05T14:14:49.439Z"
-},
-{
-    "ID": 35,
-    "title": "Smw'S Diabetic Curcumin Tea, Sugar Control, Diabetic Wounds, Greenz Curcumin",
-    "price": 190,
-    "ratings": 2.5,
-    "noOfRatings": 302,
-    "imageMain": "https://cdn01.pharmeasy.in/dam/products_otc/G31492/smws-diabetic-curcumin-tea-sugar-control-diabetic-wounds-greenz-curcumin-30-sachet-1-1651657687.jpg?dim=700x0&dpr=1&q=100",
-    "morePhoto": [
-        "https://cdn01.pharmeasy.in/dam/products_otc/G31492/smws-diabetic-curcumin-tea-sugar-control-diabetic-wounds-greenz-curcumin-30-sachet-2.1-1651657677.jpg",
-        "https://cdn01.pharmeasy.in/dam/products_otc/G31492/smws-diabetic-curcumin-tea-sugar-control-diabetic-wounds-greenz-curcumin-30-sachet-2.1-1651657677.jpg",
-        "https://cdn01.pharmeasy.in/dam/products_otc/G31492/smws-diabetic-curcumin-tea-sugar-control-diabetic-wounds-greenz-curcumin-30-sachet-2.1-1651657677.jpg"
-    ],
-    "Category": "Beverages",
-    "deliveryDate": "2022-12-11T19:48:09.909Z"
 },
 {
     "ID": 36,
