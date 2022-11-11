@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Healthy Food and Drinks Page</title>
-    <link rel="stylesheet" href="HealthyFoodPage.css">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="ProductPagePharmNotEasy.css">
 </head>
 
 <body>
     <!-- navbar, search, login-->
-    <div id="alert"><div id="alertMessage">Alert Message</div></div>
+    <div id="alert">
+        <div id="alertMessage">Alert Message</div>
+    </div>
     <div id="LogIn_SignUp-background" style="display: none;"></div>
     <div id="LogIn_SignUp" style="display: none;">
         <div id="logInClose">
@@ -48,7 +50,8 @@
                     <span>Change Number</span><span>Resend OTP</span>
                 </div>
                 <span id="InvailidOTP"
-                    style="font-size: 12px; font-weight: 400; color: rgb(255, 92, 92); display: none;">The code entered is incorrect.</span><br>
+                    style="font-size: 12px; font-weight: 400; color: rgb(255, 92, 92); display: none;">The code entered
+                    is incorrect.</span><br>
                 <input type="submit" name="" id="Continue" value="Continue">
             </form>
             <div>
@@ -169,162 +172,182 @@
     <div id="separator"></div>
     <div id="theBody">
         <div id="currentPage">
-            <a href="PharmNotEasy.html">Home ></a>
-            <a href="javascript:history.back()">All categories ></a>
-            <span>Health Food And Drinks</span>
+            <div id="currentPage">
+                <a href="PharmNotEasy.html">Home ></a>
+                <a href="javascript:history.back()">Healthcare ></a>
+                <span id="page_name">Page Name</span>
+            </div>
         </div>
-        <div id="section">
-            <div id="filterPart">
-                <div id="filterHeading" style="color: #4f585e; margin-left: 10px;">Filter</div>
-                <div id="filterCat">
-                    <div id="filHead1">Category</div>
-                    <div>
+        <div id="mainBodyCont">
+            <div id="productSec">
+                <div id="imageSec">
+                    <div id="mainImageDiv">
                         <div>
-                            <label for="category">Health Food And Drinks</label>
-                            <input type="radio" name="category" id="cate" checked="checked">
+                            <img src="" alt="" id="mainImage">
+                        </div>
+                    </div>
+                    <div id="smallImages">
+                        <div id="sImgDiv0">
+                            <img src="" alt="" id="sImg0">
+                        </div>
+                        <div id="sImgDiv1">
+                            <img src="" alt="" id="sImg1">
+                        </div>
+                        <div id="sImgDiv2">
+                            <img src="" alt="" id="sImg2">
+                        </div>
+                        <div id="sImgDiv3">
+                            <img src="" alt="" id="sImg3">
+                        </div>
+                    </div>
+                    <div>
+                        <span style="font-size: 10px; color: #8897A2; cursor: text;">Non Returnable</span>
+                        <span style="font-size: 10px; cursor: pointer;" class="readMore">Read More</span>
+                    </div>
+                </div>
+                <div id="deatilsSec">
+                    <div id="ProductDataShow">
+                        <div id="itemName">Pentasure Hp Banana Vanilla Whey Protein Tin Of 400 G</div>
+                        <div id="itemStore">Visit PARENT COMPANY Store</div>
+                        <div id="itemRatingsInStar">
+                            <div id="starRating">
+                                <img src="images/star-png.webp" alt="">
+                                <img src="images/star-png.webp" alt="">
+                                <img src="images/star-png.webp" alt="">
+                                <img src="images/star-png.webp" alt="">
+                                <img src="images/star-png.webp" alt="">
+                            </div>
+                            <span id="noOfPeopleRated">(6 ratings)</span>
+                        </div>
+                        <div id="itemPrice">
+                            <div>
+                                <div id="amountSec">
+                                    <div>
+                                        <span style="font-size: 20px; font-weight: 600; color: #4F585E;"
+                                            id="price">₹200.99</span>
+                                        <span style="font-size: 14px; font-weight: 400; color: #8897A2;">MRP</span>
+                                        <span
+                                            style="text-decoration: line-through; font-size: 14px; font-weight: 400; color: #8897A2;"
+                                            id="maxPrice">₹1000</span>
+                                    </div>
+                                    <div id="discount">
+                                        50% OFF
+                                    </div>
+                                </div>
+                                <span style="font-weight: 400; font-size: 10px; color: #8897A2;">Inclusive of all
+                                    taxes</span>
+                            </div>
+                            <button id="addToCartBtn">Add To Cart</button>
+                        </div>
+                        <div id="itemDelivery">
+                            <span style="font-size: 12px; color: #4F585E; font-weight: 400;">Delivery by</span>
+                            <span style="font-size: 12px; color: #4F585E; font-weight: 600;" id="deliveryDate">Today,
+                                before 10:00 pm</span>
+                        </div>
+                    </div>
+                    <div id="size_quantity">
+                        <div style="font-size: 16px; font-weight: 600; color: #4F585E;">Select Available Variant</div>
+                        <div style="font-size: 14px; font-weight: 600; color: #4F585E;">Pack Size</div>
+                        <div>
+                            <div>250 G</div>
+                            <div id="weight" style="font-weight: 600;">500 G</div>
+                            <div>1 kg</div>
+                            <div>2 kg</div>
                         </div>
                     </div>
                 </div>
-                <div id="filterSubcat">
-                    <div id="filHead2">Sub category</div>
-                    <div id="filterWork">
-                        <div>
-                            <label for="Nutritional_Drinks">Nutritional Drinks</label>
-                            <input type="radio" name="Nutritional_Drinks" id="subCateopt1"  value="Nutritional Drinks">
-                        </div>
 
-                        <div>
-                            <label for="Health_food">Health Food</label>
-                            <input type="radio" name="Health_food" id="subCateopt2" value="Health Food">
-                        </div>
-
-                        <div>
-                            <label for="Diabetic_Care">Diabetic Care</label>
-                            <input type="radio" name="Diabetic_Care" id="subCateopt3" value="Diabetic Care">
-                        </div>
-
-                        <div>
-                            <label for="Beverages">Beverages</label>
-                            <input type="radio" name="Beverages" id="subCateopt4" name="Beverages">
-                        </div>
-
-                        <div>
-                            <label for="Weight_Management">Weight Management</label>
-                            <input type="radio" name="Weight_Management" id="subCateopt5"
-                            value="Weight Management">
-                        </div>
-                        <span style="font-size: 14px; color: #10847e; font-weight: 600;">View More</span>
-                    </div>
+            </div>
+            <div id="addToCartSec">
+                <div id="about_current_product"></div>
+                <div id="viewCart_sec">
+                    <span id="viewCartBtnHeading">Please add item(s) to proceed</span>
+                    <button id="viewCartBtn">View Cart <svg viewBox="1 2 20 20" width="17" height="17">
+                            <path fill="currentColor" fill-rule="evenodd" d="M8 7.4L9.4 6l6 6-6 6L8 16.6l4.6-4.6z">
+                            </path>
+                        </svg></button>
                 </div>
-                <div id="filterBrand">
-                    <div id="filHead3">Brand</div>
-                    <div>
-                        <input type="text" placeholder="Search">
-                        <svg viewBox="0 0 24 24" width="16" height="16">
-                            <path fill="currentColor" fill-rule="evenodd"
-                                d="M15.866 14.32h-.817l-.284-.282a6.658 6.658 0 0 0 1.613-4.349 6.689 6.689 0 1 0-6.689 6.69 6.66 6.66 0 0 0 4.348-1.612l.284.282v.815L19.465 21l1.534-1.534-5.133-5.146zm-6.177 0a4.63 4.63 0 1 1 0-9.262 4.63 4.63 0 0 1 0 9.262z">
+                <div id="offersJustForYou">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="41" viewBox="0 0 39 41">
+                        <g fill="none" fill-rule="evenodd" opacity=".202">
+                            <g>
+                                <g>
+                                    <g>
+                                        <path fill="#F76B6D"
+                                            d="M29.673 1.013h2.154c1.346.034 2.255 1.124 1.952 2.486l-.438 1.975c-.336 1.363.472 2.963 1.717 3.542l1.885.92c1.245.613 1.582 2.01.707 3.066l-1.313 1.634c-.842 1.09-.842 2.861 0 3.95l1.313 1.602c.875 1.09.538 2.452-.707 3.065l-1.885.92c-1.245.612-2.053 2.213-1.717 3.541l.438 2.044c.303 1.328-.606 2.452-1.952 2.452l-2.154.034c-1.38 0-2.76 1.056-3.097 2.418l-.471 2.01c-.303 1.328-1.616 1.975-2.861 1.362l-1.885-.886c-1.28-.579-3.03-.204-3.87.886l-1.347 1.6c-.875 1.09-2.289 1.09-3.164 0l-1.346-1.6c-.842-1.09-2.592-1.465-3.837-.886l-1.885.886c-1.28.613-2.558-.034-2.895-1.362l-.471-2.01c-.292-1.18-1.366-2.13-2.546-2.363V.955C.633.822 1.237.473 1.705-.002h25.71c.602.61 1.43 1.015 2.258 1.015z"
+                                            opacity=".746" transform="translate(-15 -638) translate(15 638)"></path>
+                                        <path fill="#FFF"
+                                            d="M22.83 8.516L10.72 27.244c-.42.669-1.201 1.034-1.923 1.034-.42 0-.87-.122-1.262-.365-1.051-.669-1.382-2.067-.69-3.131L18.954 6.114c.66-1.064 2.073-1.398 3.155-.699 1.081.67 1.382 2.037.72 3.101"
+                                            transform="translate(-15 -638) translate(15 638) matrix(-1 0 0 1 29.66 0)">
+                                        </path>
+                                    </g>
+                                    <path fill="#FFF"
+                                        d="M11.13 26.41c-1.654 1.655-4.388 1.655-6.076 0-1.653-1.691-1.653-4.382 0-6.073 1.688-1.69 4.422-1.69 6.076 0 1.687 1.69 1.687 4.382 0 6.072"
+                                        transform="translate(-15 -638) translate(15 638) matrix(-1 0 0 1 16.21 0)">
+                                    </path>
+                                    <path fill="#FFF"
+                                        d="M24.473 12.102c-1.66 1.663-4.37 1.663-6.065 0-1.66-1.697-1.66-4.4 0-6.061 1.694-1.698 4.405-1.698 6.065 0 1.695 1.662 1.695 4.364 0 6.06"
+                                        transform="translate(-15 -638) translate(15 638) matrix(-1 0 0 1 42.907 0)">
+                                    </path>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                    <span>Offers Just for you</span>
+                    <div style="cursor: pointer;">
+                        <img src="images/Untitled36_20221110010542.png" alt="">
+                        <span>Additional 10% off on Kapiva's wellness products</span>
+                        <svg viewBox="1 2 20 20" color="#10847E" width="14" height="16">
+                            <path fill="currentColor" fill-rule="evenodd" d="M8 7.4L9.4 6l6 6-6 6L8 16.6l4.6-4.6z">
                             </path>
                         </svg>
                     </div>
-                    <div>
-                        <div>
-                            <label for="&me">&me</label>
-                            <input type="checkbox" name="&me" id="brandOpt1">
-                        </div>
-
-                        <div>
-                            <label for="360DegOrg">360 Degree Organic</label>
-                            <input type="checkbox" name="360DegOrg" id="brandOpt2">
-                        </div>
-
-                        <div>
-                            <label for="Aadar">Aadar</label>
-                            <input type="checkbox" name="Aadar" id="brandOpt3">
-                        </div>
-
-                        <div>
-                            <label for="Aadvik">Aadvik</label>
-                            <input type="checkbox" name="Aadvik" id="brandOpt4">
-                        </div>
-
-                        <div>
-                            <label for="&me">Accumass</label>
-                            <input type="checkbox" name="Accumass" id="brandOpt5">
-                        </div>
-                        <span style="font-size: 14px; color: #10847e; font-weight: 600;">View More</span>
-
-                    </div>
-                </div>
-                <div id="filterPrice">
-                    <div id="filHead4">Price</div>
-                    <div>
-                        <div>
-                            <label for="below90">Below 90</label>
-                            <input type="checkbox" name="below90" id="priceOpt1">
-                        </div>
-
-                        <div>
-                            <label for="100-199">100 - 199</label>
-                            <input type="checkbox" name="100-199" id="priceOpt2">
-                        </div>
-
-                        <div>
-                            <label for="200-299">200 - 299</label>
-                            <input type="checkbox" name="200-299" id="priceOpt3">
-                        </div>
-
-                        <div>
-                            <label for="300-399">300 - 399</label>
-                            <input type="checkbox" name="300-399" id="priceOpt4">
-                        </div>
-
-                        <div>
-                            <label for="400-499">400 - 499</label>
-                            <input type="checkbox" name="400-499" id="priceOpt5">
-                        </div>
-
-                        <span style="font-size: 14px; color: #10847e; font-weight: 600;">View More</span>
-
-                    </div>
                 </div>
             </div>
-
-            <div id="productPart">
-                <div id="headContent">
-                    <span style="font-size: 26px; font-weight: 600; color: #4f585e;">Health Food and Drinks</span>
-                    <div>
-                        <span>Sort by:</span>
-                        <select name="" id="sortItems">
-                            <option value="Popularity">Popularity</option>
-                            <option value="LTH">Price low to high</option>
-                            <option value="HTL">Prince high to low</option>
-                        </select>
-                    </div>
-                </div>
-                <div id="filter" style="display: none;">
-                    <div>
-                        <span id="demandName">current demand</span>
-                        <svg viewBox="-3 8 32 10"><path fill="currentColor" fill-rule="evenodd" d="M19 6.4L17.6 5 12 10.6 6.4 5 5 6.4l5.6 5.6L5 17.6 6.4 19l5.6-5.6 5.6 5.6 1.4-1.4-5.6-5.6z"></path></svg>
-                    </div><span>Clear All</span>
-                </div>
-
-                <div id="productSection">
-                    <!--<div> card
-                            <div>product image
-                                <img src="" alt="">
-                            </div>
-                            <div>Name</div>
-                            <div>div2
-                                <span>MRP <strike>1000</strike></span>
-                            </div>
-                            <span>200</span>
-                        </div> -->
-                </div>
-            </div>
-
-            
         </div>
+        <div id="SP">
+            <span>Similar Products</span>
+            <div id="similarProducts">
+                <!-- <div class="card">
+                    <div>
+                        <img src="" alt="">
+                    </div>
+                    <span></span>
+                    <span>500g of weight</span>
+                    <span>MRP
+                        <span>₹100</span>
+                    </span>
+                    <span>₹100</span>
+                    <button>Add</button>
+                </div> -->
+            </div>
+        </div>
+        <div id="FB">
+            <span>Frequently Bought Together</span>
+            <div id="Frequently_Bought">
+                <!-- <div class="card">
+                    <div>
+                        <img src="" alt="">
+                    </div>
+                    <span></span>
+                    <span>500g of weight</span>
+                    <span>MRP
+                        <span>₹100</span>
+                    </span>
+                    <span>₹100</span>
+                    <button>Add</button>
+                </div> -->
+            </div>
+        </div>
+
+
+
+
     </div>
+    <div id="alert2">
+        <div id="alert2msg"><img src="images/27889-3-green-tick.png" alt=""><span></span></div>
+    </div>
+    <!-- footer -->
     <div id="footer">
         <div id="ratings">
             <img src="images/Screenshot 2022-11-10 231212.png" alt="">
@@ -336,4 +359,4 @@
 </body>
 
 </html>
-<script src="HealthyFoodPage.js"></script>
+<script src="ProductPagePharmNotEasy.js"></script>

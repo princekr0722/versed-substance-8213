@@ -1,3 +1,31 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+#cart{
+    position: relative;
+}
+#cartCount{
+    display: none;
+    left: 10px;
+    top: -6px;
+    position: absolute;
+    border-radius: 50px;
+    height: 16px;
+    min-width: 15px;
+    text-align: center;
+    display: inline-block;
+    font-size: 9px;
+    color: white;
+    background-color: #f47779;
+    font-weight: 700;
+}
+#cartCount>div{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 #alert{
     text-align: center;
     top: -50px;
@@ -604,6 +632,7 @@ input[type="checkbox"] {
 }
 
 #productSection>div:hover {
+    cursor: pointer;
     border: 1.5px solid #10847E;
 }
 
