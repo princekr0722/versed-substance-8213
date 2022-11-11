@@ -63,7 +63,7 @@ document.querySelector("#searchSuggestBG").addEventListener("click", () => {
 //login luctionality
 ifLoggedIn = JSON.parse(localStorage.getItem("ifLoggedIn")) || 0;
 loginNuser()
-function loginNuser(){
+function loginNuser() {
     if (ifLoggedIn == 0) {
         document.querySelector("#homePageLogInSignUp-text").innerText = "Hello, Log in";
         document.querySelector("#redDOT").style.display = "inline-block"
@@ -75,46 +75,101 @@ function loginNuser(){
 document.querySelector("#send_otp").addEventListener("click", (event) => {
     event.preventDefault();
     inpt = document.querySelector("#mobileNoInpt").value
-    if(inpt!="" && inpt.length==10){
-        document.querySelector("#InvailidMob").style.display="none";
-        OTP = Math.floor(Math.random()*(9999-1000)+1000)
-        document.querySelector("#alertMessage").innerText="Your OTP is "+OTP;
+    if (inpt != "" && inpt.length == 10) {
+        document.querySelector("#InvailidMob").style.display = "none";
+        OTP = Math.floor(Math.random() * (9999 - 1000) + 1000)
+        document.querySelector("#alertMessage").innerText = "Your OTP is " + OTP;
         document.querySelector("#alert").style.height = "120px";
-        setTimeout(()=>{
-            setTimeout(()=>{
+        setTimeout(() => {
+            setTimeout(() => {
                 document.querySelector("#alert").style.height = "20px";
-            },5000)
-        },1000)
-        document.querySelector("#mobNumHead").innerText=" "+inpt;
-        document.querySelector("#logInForm").style.display="none";
-        document.querySelector("#OTPform").style.display="block";
+            }, 5000)
+        }, 1000)
+        document.querySelector("#mobNumHead").innerText = " " + inpt;
+        document.querySelector("#logInForm").style.display = "none";
+        document.querySelector("#OTPform").style.display = "block";
 
         //OTP CHecker
-        document.querySelector("#Continue").addEventListener("click", (event)=>{
+        document.querySelector("#Continue").addEventListener("click", (event) => {
             event.preventDefault();
             int1 = document.querySelector("#OTPinput1").value;
             int2 = document.querySelector("#OTPinput2").value;
             int3 = document.querySelector("#OTPinput3").value;
             int4 = document.querySelector("#OTPinput4").value;
 
-            if(int1!=""&&int2!=""&&int3!=""&&int4!=""){
-                enterned_OTP = int1+int2+int3+int4;
-                if(enterned_OTP==OTP){
-                    document.querySelector("#InvailidOTP").style.display="none";
+            if (int1 != "" && int2 != "" && int3 != "" && int4 != "") {
+                enterned_OTP = int1 + int2 + int3 + int4;
+                if (enterned_OTP == OTP) {
+                    document.querySelector("#InvailidOTP").style.display = "none";
                     ifLoggedIn = 1;
-                    localStorage.setItem("ifLoggedIn",ifLoggedIn);
+                    localStorage.setItem("ifLoggedIn", ifLoggedIn);
                     loginNuser();
                     window.location.reload();
-                }else{
-                    document.querySelector("#InvailidOTP").style.display="inline";
+                } else {
+                    document.querySelector("#InvailidOTP").style.display = "inline";
                 }
             }
         })
-    }else{
-        document.querySelector("#InvailidMob").style.display="inline";
+    } else {
+        document.querySelector("#InvailidMob").style.display = "inline";
     }
 })
 //Move to Healthy Food and Drinks Page
-document.querySelector("#HFnDpage").addEventListener("click",()=>{
-    window.open("HealthyFoodPage.html","_self")
+document.querySelector("#HFnDpage").addEventListener("click", () => {
+    window.open("HealthyFoodPage.html", "_self")
 })
+
+function TakeMetoCat() {
+    const element = document.getElementById("Categories");
+    element.scrollIntoView({behavior: "smooth"});
+}
+function TakeMetoSBC() {
+    const element = document.getElementById("ShopByCons");
+    element.scrollIntoView({behavior: "smooth"});
+}
+function TakeMetoDOD() {
+    const element = document.getElementById("DotD");
+    element.scrollIntoView({behavior: "smooth"});
+}
+function TakeMetoFB() {
+    const element = document.getElementById("FeaturedBrands");
+    element.scrollIntoView({behavior: "smooth"});
+}
+function TakeMetoLTBC() {
+    const element = document.getElementById("LabTest");
+    element.scrollIntoView({behavior: "smooth"});
+}
+
+slideNav = document.getElementById("slideNav");
+var myScrollFunc = function () {
+    var y = window.scrollY;
+    if (y >= 200) {
+        slideNav.style.display = "inline";
+        setTimeout(()=>{
+            document.getElementById("child_nav2").style.display = "flex";
+        },200)
+        document.getElementById("search_nav").style.display = "flex";
+        document.getElementById("download_app").style.display = "none";
+    } else {
+        slideNav.style.display = "none";
+        document.getElementById("child_nav2").style.display = "none";
+        document.getElementById("search_nav").style.display = "none";
+        document.getElementById("download_app").style.display = "flex";
+    }
+};
+window.addEventListener("scroll", myScrollFunc);
+
+var cartList = JSON.parse(localStorage.getItem("cartList")) || [];
+document.querySelector("#cart").addEventListener("click",()=>{
+    window.open("CartOfPNE.html","_self")
+})
+BtnAlive();
+function BtnAlive(){
+    if(cartList.length!=0){
+        document.querySelector("#cartCount>div").innerText=cartList.length;
+        document.querySelector("#cartCount").style.display = "inline";
+    }else{
+        document.querySelector("#cartCount>div").innerText=cartList.length;
+        document.querySelector("#cartCount").style.display = "none";
+    }
+}

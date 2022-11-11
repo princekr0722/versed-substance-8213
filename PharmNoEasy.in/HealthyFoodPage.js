@@ -1,6 +1,4 @@
 document.querySelector(".search_sec").addEventListener("click", () => {
-    console.log(1)
-    console.log(1)
     document.querySelector(".searchInput").style.display = "inline"; document.querySelector(".searchBtn").style.display = "none";
     document.querySelector("#search_nav").style.borderRadius = "20px 20px 0 0";
     document.querySelector("#searchSuggest").style.display = "flex";
@@ -27,11 +25,7 @@ document.querySelector("#logInClose").addEventListener("click", () => {
     document.querySelector("#LogIn_SignUp").style.display = "none";
 })
 document.querySelector(".search_sec").addEventListener("click", () => {
-    console.log(1)
-    document.querySelector(".searchInputDummy").style.display = "none";
     document.querySelector(".searchInput").style.display = "inline";
-    console.log(1)
-    document.querySelector(".searchInputDummy").style.display = "none";
     document.querySelector(".searchInput").style.display = "inline"; document.querySelector(".searchBtn").style.display = "none";
     document.querySelector("#search_nav").style.borderRadius = "20px 20px 0 0";
     document.querySelector("#searchSuggest").style.display = "flex";
@@ -39,8 +33,6 @@ document.querySelector(".search_sec").addEventListener("click", () => {
     document.querySelector("#searchSuggestBG").style.display = "inline-block";
 })
 document.querySelector("#searchSuggestBG").addEventListener("click", () => {
-    document.querySelector(".searchInputDummy").style.display = "flex";
-    document.querySelector(".searchInput").style.display = "none";
     document.querySelector(".searchBtn").style.display = "flex";
     document.querySelector("#search_nav").style.borderRadius = "100px";
     document.querySelector("#searchSuggest").style.display = "none";
@@ -60,10 +52,7 @@ function display(data) {
     document.querySelector("#productSection").innerHTML = null;
     data.forEach((ele) => {
         card = document.createElement("div")
-        card.addEventListener("click",()=>{
-            window.open("CartOfPNE.html","_self")
-        })
-
+        
         div = document.createElement("div");
         image = document.createElement("img");
         image.setAttribute("src", ele.imageMain)
@@ -88,6 +77,20 @@ function display(data) {
         price = document.createElement("span");
         price.innerText = "₹" + ele.price + ".00";
 
+        card.addEventListener("click",()=>{
+            filteredlist = HFADdata.filter((elem)=>{
+                return ele.Category == elem.Category;
+            })
+
+            obj = {
+                element : ele,
+                strick : strick.innerText,
+                discount : discount.innerText,
+                filtered : filteredlist
+            }
+            localStorage.setItem("choosenProduct",JSON.stringify(obj))
+            window.open("ProductPagePharmNotEasy.html","_self")
+        })
         card.append(div, Name, div2, price)
         document.querySelector("#productSection").append(card);
     })
@@ -219,7 +222,6 @@ document.querySelector('#subCateopt5').addEventListener("click",(event)=>{
 ifClicked = 0;
 function filterMan(demand){
     filteredList = HFADdata.filter((ele)=>{
-        console.log(demand, ele.Category)
         return demand == ele.Category
     })
     display(filteredList)
@@ -234,3 +236,18 @@ document.querySelector("#filter").addEventListener("click", ()=>{
     document.querySelector("#filter").style.display = "none";
     display(HFADdata)
 })
+
+var cartList = JSON.parse(localStorage.getItem("cartList")) || [];
+document.querySelector("#cart").addEventListener("click",()=>{
+    window.open("CartOfPNE.html","_self")
+})
+BtnAlive();
+function BtnAlive(){
+    if(cartList.length!=0){
+        document.querySelector("#cartCount>div").innerText=cartList.length;
+        document.querySelector("#cartCount").style.display = "inline";
+    }else{
+        document.querySelector("#cartCount>div").innerText=cartList.length;
+        document.querySelector("#cartCount").style.display = "none";
+    }
+}
