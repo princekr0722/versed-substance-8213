@@ -1,1 +1,281 @@
-Work In Progress...
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="CartOfPNE.css">
+</head>
+
+<body>
+    <!-- Log In Function -->
+    <div id="alert">
+        <div id="alertMessage">Alert Message</div>
+    </div>
+    <div id="LogIn_SignUp-background" style="display: none;"></div>
+    <div id="LogIn_SignUp" style="display: none;">
+        <div id="logInClose">
+            <svg viewBox="0 0 24 24">
+                <path xmlns="http://www.w3.org/2000/svg"
+                    d="M17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41L17.59 5Z">
+                </path>
+            </svg>
+        </div>
+        <div id="LogIn_SignUp-Head">
+            <img src="images/Untitled36_20221110010839.png" alt="">
+            <img src="https://assets.pharmeasy.in/web-assets/dist/1fe1322a.svg?dim=256x0" alt="">
+        </div>
+        <div id="LogIn_SignUp-form">
+            <form id="logInForm" style="display: block;">
+                <label for="">Quick Login / Register</label><br>
+                <input type="text" name="" id="mobileNoInpt" placeholder="Enter Mobile Number"><br>
+                <span id="InvailidMob"
+                    style="font-size: 12px; font-weight: 400; color: rgb(255, 92, 92); display: none;">Enter a valid
+                    mobile number</span><br>
+                <input type="submit" name="" id="send_otp" value="Send OTP">
+            </form>
+            <form id="OTPform" style="display: none;">
+                <!-- block -->
+                <label for="">Enter OTP sent to +91 <span id="mobNumHead">9181716151</span></label><br>
+                <div id="otpInputs">
+                    <input type="text" name="" id="OTPinput1" minlength="1" maxlength="1">
+                    <input type="text" name="" id="OTPinput2" maxlength="1" minlength="1">
+                    <input type="text" name="" id="OTPinput3" maxlength="1" minlength="1">
+                    <input type="text" name="" id="OTPinput4" maxlength="1" minlength="1">
+                </div>
+                <div
+                    style="display: flex; justify-content: space-between; font-size: 12px; font-weight: bold; color: #10847E; margin-top: 16px;">
+                    <span>Change Number</span><span>Resend OTP</span>
+                </div>
+                <span id="InvailidOTP"
+                    style="font-size: 12px; font-weight: 400; color: rgb(255, 92, 92); display: none;">The code entered
+                    is incorrect.</span><br>
+                <input type="submit" name="" id="Continue" value="Continue">
+            </form>
+            <div>
+                <span>By clicking continue, you agree with our</span>
+                <span>Privacy Policy</span>
+            </div>
+        </div>
+    </div>
+    <!-- Address_Page -->
+    <div id="Address_Page-background" style="display: none;"></div>
+    <div id="Address_Page" style="display: none;">
+        <div id="AddressClose">
+            <svg viewBox="0 0 24 24">
+                <path xmlns="http://www.w3.org/2000/svg"
+                    d="M17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41L17.59 5Z">
+                </path>
+            </svg>
+        </div>
+        <div id="Address_Page-Head">
+            <div>Select Delivery Address</div>
+        </div>
+        <div id="Address_Page-body">
+            <div>Deliver To</div>
+            <div id="AddressCard">
+                <div>
+                    <svg width="30" height="30" viewBox="0 0 30 30">
+                        <defs>
+                            <path id="a" d="M.312.173h4.06v2.885H.313z"></path>
+                        </defs>
+                        <g fill="none" fill-rule="evenodd">
+                            <path fill="#DFEFF7" d="M7.703 20.217v5.125h-2.8v-5.126z"></path>
+                            <path fill="#3BB896" d="M0 20.789l12.607-.13L6.4 6.975z"></path>
+                            <path fill="#3CCEA5" d="M11.933 15.83l-10.865.11L6.585 4.083z"></path>
+                            <path fill="#3BB896" d="M6.563 2l-4.117 8.85 8.109-.083z"></path>
+                            <path fill="#B9ACFA" d="M8.225 13.413v13.76h17.833v-13.76l-8.866-8.805z"></path>
+                            <path fill="#A291FA" d="M8.23 13.453v13.72h1.516v-15.04z"></path>
+                            <path fill="#8573E1"
+                                d="M17.141 6.476L7.138 16.144a.228.228 0 0 1-.306.01l-1.066-.906a.234.234 0 0 1-.01-.346L16.686 4.37a.664.664 0 0 1 .911 0l10.93 10.53a.234.234 0 0 1-.01.347l-1.066.905a.228.228 0 0 1-.306-.01L17.141 6.477z">
+                            </path>
+                            <path fill="#F3F6FA"
+                                d="M17.141 16.416c1.624 0 2.941 1.332 2.941 2.976v7.78h-5.881v-7.78c0-1.644 1.317-2.976 2.94-2.976">
+                            </path>
+                            <path fill="#BCDFEF"
+                                d="M18.76 22.413h-.853a.426.426 0 0 1-.423-.428c0-.237.19-.428.423-.428h.854c.234 0 .423.191.423.428s-.19.428-.423.428m-1.228-5.97c-1.441.19-2.553 1.44-2.553 2.95v7.78h-.78v-7.78c0-1.644 1.318-2.978 2.942-2.978.133 0 .264.009.39.028">
+                            </path>
+                            <path fill="#F3F6FA"
+                                d="M17.142 14.348c-1.136 0-2.06-.935-2.06-2.085s.924-2.085 2.06-2.085c1.135 0 2.06.936 2.06 2.085-.001 1.15-.925 2.085-2.06 2.085">
+                            </path>
+                            <path fill="#BCDFEF"
+                                d="M15.795 12.263a2.08 2.08 0 0 1 1.702-2.052 1.863 1.863 0 0 0-.356-.032c-1.135 0-2.059.934-2.059 2.084s.924 2.085 2.06 2.085c.121 0 .24-.01.355-.032a2.082 2.082 0 0 1-1.702-2.053">
+                            </path>
+                            <path fill="#3CCEA5"
+                                d="M10.829 24.29H8.937v-.33c0-.267-.198-.507-.462-.521a.49.49 0 0 0-.515.493v.357h-.889v-.893c0-.267-.198-.507-.462-.521a.49.49 0 0 0-.514.493v.921h-.963V24c0-.269-.198-.509-.462-.523a.491.491 0 0 0-.515.494v.324a.92.92 0 0 0-.873.922c0 1.08.866 1.957 1.933 1.957h7.652a.352.352 0 0 0 .349-.354v-.114c0-1.334-1.069-2.416-2.387-2.416">
+                            </path>
+                            <g transform="translate(23.815 24.123)">
+                                <mask id="b" fill="#fff">
+                                    <use xlink:href="#a"></use>
+                                </mask>
+                                <path fill="#3CCEA5"
+                                    d="M2.95 3.059H1.735A1.432 1.432 0 0 1 .312 1.617v-.003C.312.818.949.173 1.735.173H2.95c.786 0 1.423.645 1.423 1.441v.003c0 .796-.637 1.442-1.423 1.442"
+                                    mask="url(#b)"></path>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+                <div>
+                    <div>
+                        <span>Home</span>
+                        <input checked="checked" type="radio">
+                    </div>
+                    <div>
+                        <p>Example Sharma</p>
+                        <p>1668 Margaret Street, Houston, Texas, 77024<br>832-570-7961</p>
+                    </div>
+                </div>
+            </div>
+            <div id="Save_Address">Save</div>
+        </div>
+    </div>
+
+
+    <div id="loding">
+        <div>
+            <img src="images/ajax-loader.gif" alt="">
+        </div>
+    </div>
+
+    <div id="navbar">
+        <div>
+            <div id="logo_sec">
+                <img src="images/Untitled36_20221110010839.png">
+            </div>
+            <div id="option_sec">
+                <div id="search_sec">
+                    <div id="pinCode">
+                        <span>Select Pincode</span>
+                        <img src="images/invert Tringle.png" alt="">
+                    </div>
+                    <div id="inputDiv">
+                        <input type="text" placeholder="Search medicines/Healthcare products">
+                    </div>
+                    <div id="searchIcon">
+                        <svg viewBox="0 0 24 24" width="25">
+                            <path fill="currentColor" fill-rule="evenodd"
+                                d="M15.866 14.32h-.817l-.284-.282a6.658 6.658 0 0 0 1.613-4.349 6.689 6.689 0 1 0-6.689 6.69 6.66 6.66 0 0 0 4.348-1.612l.284.282v.815L19.465 21l1.534-1.534-5.133-5.146zm-6.177 0a4.63 4.63 0 1 1 0-9.262 4.63 4.63 0 0 1 0 9.262z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+                <div id="optionsRow">
+                    <div id="midOpt">
+                        <a href="">Order Medicines</a>
+                        <a href="">Healthcare Products</a>
+                        <a href="">Lab Tests</a>
+                        <a href="">RTPCR</a>
+                    </div>
+                    <div id="endOpt">
+                        <div>
+                            <img src="https://assets.pharmeasy.in/web-assets/dist/275c07e1.svg" alt="">
+                            <span>Offers</span>
+                        </div>
+                        <div>
+                            <img src="https://assets.pharmeasy.in/web-assets/dist/5eb42971.svg" alt="">
+                            <span id="LoginOrSignin">Login / Signup</span>
+                            <span id="user_already">User</span>
+                            <div id="LogOutBtn">Log Out</div>
+                        </div>
+                        <div>
+                            <img src="https://assets.pharmeasy.in/web-assets/dist/21b0b5ba.svg" alt="">
+                            <span>Cart</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="Separator"></div>
+    <div id="theBody">
+        <div id="mainBody">
+            <div id="cartItemsSec">
+                <div id="noOfItems">
+                    <span style="color: #4f585e; font-size: 26px; font-weight: 600;"># Items In Cart</span>
+                    <span style="color: #8897a2; font-size: 12px; font-weight: 400;">Prices are indicative</span>
+                </div>
+                <div id="cartItemHere">
+                    <!-- One Card -->
+
+                </div>
+                <div id="FI">
+                    <span>Customers who bought above items also bought</span>
+                    <div id="Featured_Items">
+                        <!-- <div class="card">
+                            <div>
+                                <img src="" alt="">
+                            </div>
+                            <span></span>
+                            <span>500g of weight</span>
+                            <span>MRP
+                                <span>₹100</span>
+                            </span>
+                            <span>₹100</span>
+                            <button>Add</button>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="addressSec">
+                <div id="addCoupon">
+                    <div>
+                        <img src="https://assets.pharmeasy.in/web-assets/dist/90a09c2f.svg" alt="">
+                        <span>Apply Coupon / View Offers</span>
+                    </div>
+                    <svg viewBox="0 0 24 24" width="24" height="24">
+                        <path fill="currentColor" fill-rule="evenodd" d="M8 7.4L9.4 6l6 6-6 6L8 16.6l4.6-4.6z"></path>
+                    </svg>
+                </div>
+                <div style="display: none;" id="ProceedToBuyBtn">Proceed To Buy</div>
+                <div id="AddAddressBtn">Add Delivery Address</div>
+                <div id="SelectAdressBtn">Select Delivery Address</div>
+                <div id="deliveryOfferBtn">
+                    <img src="https://cdn.pharmeasy.in/cms/delivery_image.png" alt="">
+                    <span>Free delivery with cart value above ₹500</span>
+                </div>
+                <div id="OrderSum">
+                    <span>Order Summary</span>
+                    <div>
+                        <span id="PriceTotalSec">Cart Value</span>
+                        <div>
+                            <span id="maxPriceTotal">₹000.00</span>
+                            <span id="PriceTotal">₹000.00</span>
+                        </div>
+                    </div>
+                    <div id="deliveryChargesSec">
+                        <span>Delivery charges</span>
+                        <div>
+                            <span id="freeDelivery">Free</span>
+                            <span id="maxDeliPrice">₹99.00</span>
+                            <span id="deliPrice">₹49.00</span>
+                        </div>
+                    </div>
+                    <div id="GrandTotalSec">
+                        <span>Amount to be paid</span>
+                        <span id="GrandTotal">₹463.96</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="alert2">
+        <div id="alert2msg"><img src="images/27889-3-green-tick.png" alt=""><span></span></div>
+    </div>
+    <div id="footer">
+        <div id="ratings">
+            <img src="images/Screenshot 2022-11-10 231212.png" alt="">
+            <img src="images/Screenshot 2022-11-10 231511.png" alt="">
+            <img src="images/Screenshot 2022-11-10 231827.png" alt="">
+            <img src="images/Screenshot 2022-11-10 231921.png" alt="">
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="./CartOfPNE.js"></script>

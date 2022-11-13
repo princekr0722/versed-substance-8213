@@ -2,8 +2,6 @@ document.querySelector("#PharmNotEasyLogo").addEventListener("click", () => {
     window.open("PharmNotEasy.html", "_self")
 })
 document.querySelector(".search_sec").addEventListener("click", () => {
-    console.log(1)
-    console.log(1)
     document.querySelector(".searchInput").style.display = "inline"; document.querySelector(".searchBtn").style.display = "none";
     document.querySelector("#search_nav").style.borderRadius = "20px 20px 0 0";
     document.querySelector("#searchSuggest").style.display = "flex";
@@ -240,12 +238,9 @@ dataToShow.filtered.forEach((ele) => {
     }
 })
 function FBlisting() {
-    console.log(HFADdata)
     HFADdata.forEach((ele, index) => {
-        console.log(1)
-
         var ranNum = Math.floor(Math.random() * (8 - 3) + 3);
-        if (index % ranNum == 0) {
+        if (index % ranNum == 0 && index!=0) {
 
             if (ele.title != document.querySelector("#itemName").innerText) {
                 card = document.createElement("div")

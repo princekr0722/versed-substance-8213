@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="PaymentPagePNE.css">
+</head>
+
+<body>
+    <div id="Address_Page-background" style="display: none;"></div>
+    <div id="Address_Page" style="display: none;">
+        <div id="AddressClose">
+            <svg viewBox="0 0 24 24">
+                <path xmlns="http://www.w3.org/2000/svg"
+                    d="M17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41L17.59 5Z">
+                </path>
+            </svg>
+        </div>
+        <div id="cardPayment_Page-body">
+            <div id="headCP">Enter Card Details</div>
+            <form>
+                <div id="CardDeatils">
+                    <div>
+                        <span class="heading_cardDetail">Card Number</span>
+                        <input type="text" maxlength="16" placeholder="1234-5678-9876-5432" class="inputCardDeatls" id="CardNum">
+                        <span id="cardNum_error" class="errorAlert"></span>
+                    </div>
+                    <div id="CVVandValid">
+                        <div class="heading_cardDetail">
+                            <span>Valid Through</span>
+                            <input type="month" class="inputCardDeatls" id="validation">
+                            <span id="validation_error" class="errorAlert"></span>
+                        </div>
+                        <div class="heading_cardDetail"> 
+                            <span>CVV</span>
+                            <input type="text" minlength="3" maxlength="3" placeholder="123" class="inputCardDeatls" id="CVV">
+                            <span id="CVV_error" class="errorAlert"></span>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="heading_cardDetail">Name on Card</span>
+                        <input type="text" minlength="3"  placeholder="e.g. Example Sharma" class="inputCardDeatls" id="Name">
+                        <span id="Name_error" class="errorAlert"></span>
+                    </div>
+                    <div class="heading_cardDetail" style="display: None;">
+                        <input type="checkbox"><span>Save this card for future payments</span>
+                    </div>
+                </div>
+                <input id="confirmPay" type="submit" value="Place Order & Pay ₹1999.99">
+                <!-- <div id="confirmPay">
+                    Place Order & Pay ₹
+                    <span>00.00</span>
+                </div> -->
+            </form>
+
+            <div id="footPayPage">
+                <div>
+                    <span style="color: #4F585E; font-size: 12px; font-weight: 400;">We support</span>
+                    <div>
+                        <img src="https://consumer-app-images.pharmeasy.in/payment-icons/visa.png" alt="">
+                        <img src="https://consumer-app-images.pharmeasy.in/payment-icons/mastercard-logo.png" alt="">
+                        <img src="https://consumer-app-images.pharmeasy.in/payment-icons/rupay.png" alt="">
+                        <img src="https://consumer-app-images.pharmeasy.in/payment-icons/maestro-logo.png" alt="">
+                        <img src="https://consumer-app-images.pharmeasy.in/payment-icons/dinerCard.png" alt="">
+                    </div>
+                </div>
+                <div>
+                    <img src="https://assets.pharmeasy.in/web-assets/dist/f2189b34.svg" alt="">
+                    <span>Your card details will be stored securely for your convenience. We do not store CVV.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="navbar">
+        <div>
+            <div id="logo_sec">
+                <img src="images/Untitled36_20221110010839.png">
+            </div>
+            <div id="Text_sec">
+                <div>
+                    <svg class="a6G4b" width="20" height="20" viewBox="0 0 20 20">
+                        <path fill="currentColor"
+                            d="M13.007 9.395L11.82 10.61l.281 1.688a.449.449 0 0 1-.189.438.516.516 0 0 1-.264.082.52.52 0 0 1-.218-.047l-1.417-.782-1.422.782a.505.505 0 0 1-.218.047.528.528 0 0 1-.265-.082.455.455 0 0 1-.188-.438l.281-1.688-1.183-1.215c-.125-.113-.155-.293-.109-.456a.441.441 0 0 1 .357-.305l1.623-.245.7-1.494a.455.455 0 0 1 .406-.259c.172 0 .328.1.408.259l.7 1.494 1.622.245c.172.03.31.146.357.305a.48.48 0 0 1-.075.456M9.943 2C9.81 2.056 3 4.62 3 4.623v4.819c0 3.34.977 7.705 6.943 9.329 5.951-1.624 6.928-6.065 6.928-9.33.014-1.647.014-4.818.014-4.818 0-.004-6.77-2.557-6.942-2.623">
+                        </path>
+                    </svg>
+                </div>
+                <span>100% Secure Payments</span>
+            </div>
+        </div>
+    </div>
+    <div id="Separator"></div>
+    <div id="theBody">
+        <div id="paymentOptions_sec">
+            <div style="font-size: 26px; color: #4F585E;font-weight: 600;">Payment Options</div>
+            <div id="cardOption">
+                <div>
+                    <img src="https://cdn.pharmeasy.in/payments/card.png" alt="">
+                </div>
+                <div>
+                    <div>
+                        <span>Credit/Debit Card</span>
+                        <svg viewBox="0 0 24 24" class="_1xeUi">
+                            <path fill="teal" fill-rule="evenodd" d="M8 7.4L9.4 6l6 6-6 6L8 16.6l4.6-4.6z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        Up to Rs.150 off on HSBC Cashback Credit Card. Valid once per user & on orders above Rs.1000.
+                        <br>
+                        RuPay: Flat Rs 300 off on Credit Cards and Rs 150 off on Debit Cards. Once per user on orders
+                        above Rs 1500.
+                    </div>
+                    <div>
+                        <img src="https://consumer-app-images.pharmeasy.in/payment-icons/visa.png" alt="">
+                        <img src="https://consumer-app-images.pharmeasy.in/payment-icons/mastercard-logo.png" alt="">
+                        <img src="https://consumer-app-images.pharmeasy.in/payment-icons/rupay.png" alt="">
+                        <img src="https://consumer-app-images.pharmeasy.in/payment-icons/maestro-logo.png" alt="">
+                        <img src="https://consumer-app-images.pharmeasy.in/payment-icons/dinerCard.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div  id="COD">
+                <div>
+                    <img src="https://consumer-app-images.pharmeasy.in/payment-icons/cod.png" alt="">
+                </div>
+                <div>
+                    <div>
+                        <span>Cash On Delivery</span>
+                        <svg viewBox="0 0 24 24" class="_1xeUi">
+                            <path fill="teal" fill-rule="evenodd" d="M8 7.4L9.4 6l6 6-6 6L8 16.6l4.6-4.6z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        ₹25 will be charged for Cash on Delivery. Switch to online payments to save on ₹25.
+                    </div>
+                </div>
+                
+            </div>
+            <span style="display: inline-block; width: 200px;background-color: teal; color: white; font-size: 16px; border-radius: 6px; height: 45px;display: none; align-items: center; justify-content: center;cursor: pointer;" id="CODPay"></span>
+        </div>
+        <div id="OrderSum">
+            <span>Price Breakdown</span>
+            <div>
+                <span id="PriceTotalSec">Cart Value</span>
+                <div>
+                    <span id="maxPriceTotal">₹000.00</span>
+                    <span id="PriceTotal">₹000.00</span>
+                </div>
+            </div>
+            <div id="deliveryChargesSec">
+                <span>Delivery charges</span>
+                <div>
+                    <span id="freeDelivery">Free</span>
+                    <span id="maxDeliPrice">₹99.00</span>
+                    <span id="deliPrice">₹49.00</span>
+                </div>
+            </div>
+            <div id="GrandTotalSec">
+                <span>Amount to be paid</span>
+                <span id="GrandTotal">₹000.00</span>
+            </div>
+        </div>
+    </div>
+    <div id="alert2">
+        <div id="alert2msg"><img src="images/27889-3-green-tick.png" alt=""><span></span></div>
+    </div>
+</body>
+
+</html>
+<script src="PaymentPagePNE.js"></script>
