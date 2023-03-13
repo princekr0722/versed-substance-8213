@@ -1,3 +1,3 @@
 # -versed-substance-8213
 
-- deployed link: https://steady-jalebi-560beb.netlify.app
+- <a href="https://steady-jalebi-560beb.netlify.app">deployed link</a>
